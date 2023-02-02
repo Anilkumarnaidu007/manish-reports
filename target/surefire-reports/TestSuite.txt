@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 4, Errors: 0, Skipped: 8, Time elapsed: 1.094 sec <<< FAILURE! - in TestSuite
+initilize_browser(Charts.E_Boarding_Reports.Validate_navigation_url)  Time elapsed: 0.232 sec  <<< FAILURE!
+java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
+	at Charts.E_Boarding_Reports.Validate_navigation_url.initilize_browser(Validate_navigation_url.java:23)
+
+initilize_browser(Charts.E_Boarding_Reports.Validate_titlebar)  Time elapsed: 0.009 sec  <<< FAILURE!
+java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
+	at Charts.E_Boarding_Reports.Validate_titlebar.initilize_browser(Validate_titlebar.java:21)
+
+initializebrowser(Charts.E_Boarding_Reports.Login_page_verification)  Time elapsed: 0.014 sec  <<< FAILURE!
+java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
+	at Charts.E_Boarding_Reports.Login_page_verification.initializebrowser(Login_page_verification.java:19)
+
+sha_avgdata_database(Charts.E_Boarding_Reports.Sha_dwelltime_validation)  Time elapsed: 0.009 sec  <<< FAILURE!
+java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
+	at Charts.E_Boarding_Reports.Sha_dwelltime_validation.sha_avgdata_database(Sha_dwelltime_validation.java:23)
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" allow-return-values="true">
+  <listeners>
+    <listener class-name="Charts.E_Boarding_Reports.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Validating navigation bar(failed)">
+    <classes>
+      <class name="Charts.E_Boarding_Reports.Validate_navigation_url">
+        <methods>
+          <include name="Validate_url"/>
+          <include name="teardown"/>
+          <include name="initilize_browser"/>
+        </methods>
+      </class> <!-- Charts.E_Boarding_Reports.Validate_navigation_url -->
+    </classes>
+  </test> <!-- Validating navigation bar(failed) -->
+</suite> <!-- Failed suite [Suite] -->
