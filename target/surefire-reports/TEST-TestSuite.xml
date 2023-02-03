@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="1.094" tests="13" errors="0" skipped="8" failures="4">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="72.906" tests="5" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_341\jre\bin"/>
@@ -28,7 +28,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.8.7\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_341\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\apache-maven-3.8.7\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_341\bin;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Azure Data Studio\bin;C:\Users\admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\admin\AppData\Roaming\npm;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_341\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\apache-maven-3.8.7\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_341\bin;C:\Program Files\Git\cmd;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Azure Data Studio\bin;C:\Users\admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\admin\AppData\Roaming\npm;."/>
     <property name="maven.conf" value="C:\Program Files\apache-maven-3.8.7/conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
@@ -64,61 +64,63 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="sample" classname="Charts.E_Boarding_Reports.Test_info" time="0.007"/>
-  <testcase name="initilize_browser" classname="Charts.E_Boarding_Reports.Validate_navigation_url" time="0.232">
-    <failure message="The driver executable must exist: C:\chromedriver.exe" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
-	at Charts.E_Boarding_Reports.Validate_navigation_url.initilize_browser(Validate_navigation_url.java:23)
+  <testcase name="sample" classname="Charts.E_Boarding_Reports.Test_info" time="0.005"/>
+  <testcase name="Validate_url" classname="Charts.E_Boarding_Reports.Validate_navigation_url" time="0.037">
+    <failure message="expected [http://localhost:8080/login] but found [http://localhost:8080/main]" type="java.lang.AssertionError">java.lang.AssertionError: expected [http://localhost:8080/login] but found [http://localhost:8080/main]
+	at Charts.E_Boarding_Reports.Validate_navigation_url.Validate_url(Validate_navigation_url.java:35)
 </failure>
     <system-out><![CDATA[chrome
 http://localhost:8080/main
+http://localhost:8080/main
 ]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 64772
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Feb 02, 2023 5:20:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+Feb 02, 2023 5:20:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
+Feb 02, 2023 5:20:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 109.
+Feb 02, 2023 5:20:10 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
   </testcase>
-  <testcase name="Validate_url" classname="Charts.E_Boarding_Reports.Validate_navigation_url" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="teardown" classname="Charts.E_Boarding_Reports.Validate_navigation_url" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="initilize_browser" classname="Charts.E_Boarding_Reports.Validate_titlebar" time="0.009">
-    <failure message="The driver executable must exist: C:\chromedriver.exe" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
-	at Charts.E_Boarding_Reports.Validate_titlebar.initilize_browser(Validate_titlebar.java:21)
+  <testcase name="titlebar" classname="Charts.E_Boarding_Reports.Validate_titlebar" time="0.008"/>
+  <testcase name="Login_validation" classname="Charts.E_Boarding_Reports.Login_page_verification" time="0.221"/>
+  <testcase name="sha_avg" classname="Charts.E_Boarding_Reports.Sha_dwelltime_validation" time="6.856">
+    <failure message="invalid session id&#10;Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;&#10;System info: host: &apos;DESKTOP-18T66DG&apos;, ip: &apos;172.27.90.42&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_341&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [d52744798821bf99e71b50d622653059, findElement {using=xpath, value=//div/div/i[@class=&apos;mx-icon-calendar&apos;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63831}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63831/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: d52744798821bf99e71b50d622653059" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: 
+invalid session id
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-18T66DG', ip: '172.27.90.42', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d52744798821bf99e71b50d622653059, findElement {using=xpath, value=//div/div/i[@class='mx-icon-calendar']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63831}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63831/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d52744798821bf99e71b50d622653059
+	at Charts.E_Boarding_Reports.Sha_dwelltime_validation.sha_avg(Sha_dwelltime_validation.java:36)
 </failure>
     <system-out><![CDATA[chrome
 http://localhost:8080/main
+2023-02-01
+ConnectionID:1 ClientConnectionId: 55f1908a-0e38-48b3-9159-67fcc6915cb2
+[2, 3, 2, 2, 2, 3, 2, 2, 2, 3, 2, 2, 2, 2, 3, 2, 2, 2, 2, 3, 3, 2, 1, 4]
 ]]></system-out>
-  </testcase>
-  <testcase name="titlebar" classname="Charts.E_Boarding_Reports.Validate_titlebar" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="teardown" classname="Charts.E_Boarding_Reports.Validate_titlebar" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="initializebrowser" classname="Charts.E_Boarding_Reports.Login_page_verification" time="0.014">
-    <failure message="The driver executable must exist: C:\chromedriver.exe" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
-	at Charts.E_Boarding_Reports.Login_page_verification.initializebrowser(Login_page_verification.java:19)
-</failure>
-    <system-out><![CDATA[chrome
-http://localhost:8080/main
-]]></system-out>
-  </testcase>
-  <testcase name="Login_validation" classname="Charts.E_Boarding_Reports.Login_page_verification" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="teardown" classname="Charts.E_Boarding_Reports.Login_page_verification" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="sha_avgdata_database" classname="Charts.E_Boarding_Reports.Sha_dwelltime_validation" time="0.009">
-    <failure message="The driver executable must exist: C:\chromedriver.exe" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
-	at Charts.E_Boarding_Reports.Sha_dwelltime_validation.sha_avgdata_database(Sha_dwelltime_validation.java:23)
-</failure>
-    <system-out><![CDATA[chrome
-http://localhost:8080/main
-]]></system-out>
-  </testcase>
-  <testcase name="sha_avg" classname="Charts.E_Boarding_Reports.Sha_dwelltime_validation" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="teardown" classname="Charts.E_Boarding_Reports.Sha_dwelltime_validation" time="0">
-    <skipped/>
+    <system-err><![CDATA[Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 63268
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Feb 02, 2023 5:20:55 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+Feb 02, 2023 5:20:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
+Feb 02, 2023 5:20:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 109.
+Feb 02, 2023 5:20:55 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
   </testcase>
 </testsuite>

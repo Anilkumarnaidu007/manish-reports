@@ -1,20 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 4, Errors: 0, Skipped: 8, Time elapsed: 1.094 sec <<< FAILURE! - in TestSuite
-initilize_browser(Charts.E_Boarding_Reports.Validate_navigation_url)  Time elapsed: 0.232 sec  <<< FAILURE!
-java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
-	at Charts.E_Boarding_Reports.Validate_navigation_url.initilize_browser(Validate_navigation_url.java:23)
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 72.906 sec <<< FAILURE! - in TestSuite
+Validate_url(Charts.E_Boarding_Reports.Validate_navigation_url)  Time elapsed: 0.037 sec  <<< FAILURE!
+java.lang.AssertionError: expected [http://localhost:8080/login] but found [http://localhost:8080/main]
+	at Charts.E_Boarding_Reports.Validate_navigation_url.Validate_url(Validate_navigation_url.java:35)
 
-initilize_browser(Charts.E_Boarding_Reports.Validate_titlebar)  Time elapsed: 0.009 sec  <<< FAILURE!
-java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
-	at Charts.E_Boarding_Reports.Validate_titlebar.initilize_browser(Validate_titlebar.java:21)
-
-initializebrowser(Charts.E_Boarding_Reports.Login_page_verification)  Time elapsed: 0.014 sec  <<< FAILURE!
-java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
-	at Charts.E_Boarding_Reports.Login_page_verification.initializebrowser(Login_page_verification.java:19)
-
-sha_avgdata_database(Charts.E_Boarding_Reports.Sha_dwelltime_validation)  Time elapsed: 0.009 sec  <<< FAILURE!
-java.lang.IllegalStateException: The driver executable must exist: C:\chromedriver.exe
-	at Charts.E_Boarding_Reports.Sha_dwelltime_validation.sha_avgdata_database(Sha_dwelltime_validation.java:23)
+sha_avg(Charts.E_Boarding_Reports.Sha_dwelltime_validation)  Time elapsed: 6.856 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+invalid session id
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-18T66DG', ip: '172.27.90.42', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d52744798821bf99e71b50d622653059, findElement {using=xpath, value=//div/div/i[@class='mx-icon-calendar']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63831}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63831/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d52744798821bf99e71b50d622653059
+	at Charts.E_Boarding_Reports.Sha_dwelltime_validation.sha_avg(Sha_dwelltime_validation.java:36)
 

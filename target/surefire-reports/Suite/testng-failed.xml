@@ -6,99 +6,57 @@
   </listeners>
   <test name="Validating navigation bar(failed)" parallel="none">
     <classes>
-      <class name="Charts.E_Boarding_Reports.Validate_navigation_url">
-        <methods>
-          <include name="Validate_url"/>
-          <include name="initilize_browser"/>
-        </methods>
-      </class> <!-- Charts.E_Boarding_Reports.Validate_navigation_url -->
       <class name="Charts.E_Boarding_Reports.Sha_dwelltime_validation">
         <methods>
           <include name="sha_avgdata_database"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- Charts.E_Boarding_Reports.Sha_dwelltime_validation -->
       <class name="Charts.E_Boarding_Reports.Login_page_verification">
         <methods>
+          <include name="teardown"/>
           <include name="initializebrowser"/>
         </methods>
       </class> <!-- Charts.E_Boarding_Reports.Login_page_verification -->
+      <class name="Charts.E_Boarding_Reports.Validate_navigation_url">
+        <methods>
+          <include name="Validate_url"/>
+          <include name="initilize_browser"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Charts.E_Boarding_Reports.Validate_navigation_url -->
       <class name="Charts.E_Boarding_Reports.Validate_titlebar">
         <methods>
+          <include name="teardown"/>
           <include name="initilize_browser"/>
         </methods>
       </class> <!-- Charts.E_Boarding_Reports.Validate_titlebar -->
     </classes>
   </test> <!-- Validating navigation bar(failed) -->
-  <test name="Validating title(failed)" parallel="none">
-    <classes>
-      <class name="Charts.E_Boarding_Reports.Validate_navigation_url">
-        <methods>
-          <include name="initilize_browser"/>
-        </methods>
-      </class> <!-- Charts.E_Boarding_Reports.Validate_navigation_url -->
-      <class name="Charts.E_Boarding_Reports.Sha_dwelltime_validation">
-        <methods>
-          <include name="sha_avgdata_database"/>
-        </methods>
-      </class> <!-- Charts.E_Boarding_Reports.Sha_dwelltime_validation -->
-      <class name="Charts.E_Boarding_Reports.Login_page_verification">
-        <methods>
-          <include name="initializebrowser"/>
-        </methods>
-      </class> <!-- Charts.E_Boarding_Reports.Login_page_verification -->
-      <class name="Charts.E_Boarding_Reports.Validate_titlebar">
-        <methods>
-          <include name="initilize_browser"/>
-          <include name="titlebar"/>
-        </methods>
-      </class> <!-- Charts.E_Boarding_Reports.Validate_titlebar -->
-    </classes>
-  </test> <!-- Validating title(failed) -->
-  <test name="Validating loginpage(failed)" parallel="none">
-    <classes>
-      <class name="Charts.E_Boarding_Reports.Validate_navigation_url">
-        <methods>
-          <include name="initilize_browser"/>
-        </methods>
-      </class> <!-- Charts.E_Boarding_Reports.Validate_navigation_url -->
-      <class name="Charts.E_Boarding_Reports.Sha_dwelltime_validation">
-        <methods>
-          <include name="sha_avgdata_database"/>
-        </methods>
-      </class> <!-- Charts.E_Boarding_Reports.Sha_dwelltime_validation -->
-      <class name="Charts.E_Boarding_Reports.Login_page_verification">
-        <methods>
-          <include name="initializebrowser"/>
-          <include name="Login_validation"/>
-        </methods>
-      </class> <!-- Charts.E_Boarding_Reports.Login_page_verification -->
-      <class name="Charts.E_Boarding_Reports.Validate_titlebar">
-        <methods>
-          <include name="initilize_browser"/>
-        </methods>
-      </class> <!-- Charts.E_Boarding_Reports.Validate_titlebar -->
-    </classes>
-  </test> <!-- Validating loginpage(failed) -->
   <test name="Validating sha avg data(failed)" parallel="none">
     <classes>
-      <class name="Charts.E_Boarding_Reports.Validate_navigation_url">
-        <methods>
-          <include name="initilize_browser"/>
-        </methods>
-      </class> <!-- Charts.E_Boarding_Reports.Validate_navigation_url -->
       <class name="Charts.E_Boarding_Reports.Sha_dwelltime_validation">
         <methods>
           <include name="sha_avgdata_database"/>
+          <include name="teardown"/>
           <include name="sha_avg"/>
         </methods>
       </class> <!-- Charts.E_Boarding_Reports.Sha_dwelltime_validation -->
       <class name="Charts.E_Boarding_Reports.Login_page_verification">
         <methods>
+          <include name="teardown"/>
           <include name="initializebrowser"/>
         </methods>
       </class> <!-- Charts.E_Boarding_Reports.Login_page_verification -->
+      <class name="Charts.E_Boarding_Reports.Validate_navigation_url">
+        <methods>
+          <include name="initilize_browser"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Charts.E_Boarding_Reports.Validate_navigation_url -->
       <class name="Charts.E_Boarding_Reports.Validate_titlebar">
         <methods>
+          <include name="teardown"/>
           <include name="initilize_browser"/>
         </methods>
       </class> <!-- Charts.E_Boarding_Reports.Validate_titlebar -->

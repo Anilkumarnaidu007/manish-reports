@@ -3,6 +3,7 @@ package resources;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.time.Duration;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
@@ -37,8 +38,13 @@ public class base {
 public WebDriver initializeDriver() throws IOException
 {
  prop= new Properties();
-FileInputStream fis=new FileInputStream("D:\\work_space\\E_Boarding_Reports\\src\\main\\java\\resources\\data.properties");
-
+	
+	/*
+	 * FileInputStream fis=new FileInputStream(
+	 * "D:\\work_space\\E_Boarding_Reports\\src\\main\\java\\resources\\data.properties"
+	 * );
+	 */	 
+ FileInputStream fis =new FileInputStream(System.getProperty("user.dir")+"\\reports\\data.properties");
 prop.load(fis);
 String browserName=prop.getProperty("browser");
 String urlname=prop.getProperty("url");
